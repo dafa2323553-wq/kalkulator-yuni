@@ -1,0 +1,102 @@
+/* Mengatur font dan posisi ke tengah layar */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #2c3e50, #000000); /* Background gradasi gelap */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Kotak utama kalkulator */
+.calculator {
+    background-color: #800000; /* Maroon Utama */
+    background: linear-gradient(145deg, #8b0000, #5a0000); /* Gradasi Maroon */
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 
+                inset 0 2px 2px rgba(255, 255, 255, 0.1);
+    width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Layar Display */
+#display {
+    width: 100%;
+    height: 80px;
+    font-size: 40px;
+    text-align: right;
+    border: none;
+    background-color: #3d0000; /* Maroon sangat gelap */
+    color: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    outline: none;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+/* Grid Tombol */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Style Tombol Umum */
+button {
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1); /* Efek semi transparan */
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect (saat mouse di atas tombol) */
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Saat tombol diklik */
+button:active {
+    transform: translateY(0px);
+}
+
+/* Tombol Operator (÷, ×, -, +) */
+.btn-operator {
+    background-color: #5a0000;
+    color: #ff9f43; /* Warna aksen orange lembut */
+}
+
+/* Tombol Clear (C) */
+.btn-clear {
+    background: linear-gradient(145deg, #ff4757, #c0392b);
+    color: white;
+}
+
+/* Tombol Sama Dengan (=) */
+.btn-equal {
+    background: linear-gradient(145deg, #ffa502, #e67e22);
+    color: #1e272e;
+    grid-column: span 2;
+}
+
+/* Tombol Angka Nol */
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* Memperhalus tampilan angka khusus operator agar lebih besar */
+.btn-operator, .btn-clear {
+    font-size: 22px;
+}
